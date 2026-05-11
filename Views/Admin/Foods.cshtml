@@ -1,0 +1,29 @@
+@model FoodieRestaurant.ViewModels.PagedFoodListViewModel
+@{
+    ViewData["Title"] = "Manage Foods";
+}
+<div class="d-flex justify-content-between mb-3">
+    <h2>Manage Foods</h2>
+    <a asp-action="CreateFood" class="btn btn-warning">Add Food</a>
+</div>
+<table class="table table-professional">
+    <thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Available</th><th></th></tr></thead>
+    <tbody>
+    @foreach (var food in Model.Foods)
+    {
+        <tr>
+            <td>@food.Name</td>
+            <td>@food.Category?.Name</td>
+            <td>$@food.Price</td>
+            <td>@food.IsAvailable</td>
+            <td class="d-flex gap-2">
+                <a asp-action="EditFood" asp-route-id="@food.Id" class="btn btn-outline-light btn-sm">Edit</a>
+                <form asp-action="DeleteFood" method="post">
+                    <input type="hidden" name="id" value="@food.Id" />
+                    <button class="btn btn-outline-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

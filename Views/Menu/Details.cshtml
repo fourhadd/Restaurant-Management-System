@@ -1,0 +1,32 @@
+@model FoodieRestaurant.Models.Food
+@{
+    ViewData["Title"] = "Food Details";
+}
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="image-container shadow-lg rounded-4 overflow-hidden">
+            <img src="@((Model.Name?.Contains("Lava Cake", StringComparison.OrdinalIgnoreCase) == true) ? "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800" :
+                (Model.Category?.Name == "Pizza") ? "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800" :
+                (Model.Category?.Name == "Burgers") ? "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" :
+                (Model.Category?.Name == "Desserts") ? "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800" :
+                "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800")"
+                 id="details-image"
+                 class="img-fluid"
+                 alt="Food"
+                 style="min-height: 400px; width: 100%; object-fit: cover; display: block !important; visibility: visible !important; opacity: 1 !important;" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h2>@Model.Name</h2>
+        <p class="text-secondary">@Model.Category?.Name</p>
+        <p>@Model.Description</p>
+        <h3 class="text-warning">$@Model.Price</h3>
+        <p>Rating: @Model.Rating / 5</p>
+        <form asp-controller="Cart" asp-action="Add" method="post" class="d-flex gap-2">
+            <input type="hidden" name="foodId" value="@Model.Id" />
+            <input type="number" name="quantity" min="1" value="1" class="form-control w-auto" />
+            <button class="btn btn-warning">Add to Cart</button>
+        </form>
+    </div>
+</div>

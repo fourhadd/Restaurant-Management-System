@@ -1,0 +1,23 @@
+@model FoodieRestaurant.Models.Order
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h2>Order #@Model.OrderId</h2>
+<p>Status: <strong>@Model.Status</strong></p>
+<p>Date: @Model.OrderDate.ToLocalTime()</p>
+
+<table class="table">
+    <thead><tr><th>Food</th><th>Qty</th><th>Price</th></tr></thead>
+    <tbody>
+    @foreach (var item in Model.OrderItems)
+    {
+        <tr>
+            <td>@item.Food?.Name</td>
+            <td>@item.Quantity</td>
+            <td>$@item.Price</td>
+        </tr>
+    }
+    </tbody>
+</table>
+<h4 class="text-end">Total: $@Model.TotalPrice</h4>

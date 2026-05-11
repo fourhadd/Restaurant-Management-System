@@ -1,0 +1,37 @@
+@model List<FoodieRestaurant.Models.Category>
+@{
+    ViewData["Title"] = "Categories";
+}
+<h2>Manage Categories</h2>
+
+<form asp-action="CreateCategory" method="post" class="row g-2 mb-4">
+    <div class="col-md-4"><input name="Name" class="form-control" placeholder="Category name" required /></div>
+    <div class="col-md-6"><input name="Description" class="form-control" placeholder="Description" /></div>
+    <div class="col-md-2"><button class="btn btn-warning w-100">Create</button></div>
+</form>
+
+<table class="table table-professional">
+    <thead><tr><th>Name</th><th>Description</th><th></th></tr></thead>
+    <tbody>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>
+                <form asp-action="EditCategory" method="post" class="d-flex gap-2">
+                    <input type="hidden" name="Id" value="@c.Id" />
+                    <input name="Name" value="@c.Name" class="form-control form-control-sm" required />
+                    <input name="Description" value="@c.Description" class="form-control form-control-sm" />
+                    <button class="btn btn-outline-light btn-sm">Save</button>
+                </form>
+            </td>
+            <td>@c.Description</td>
+            <td>
+                <form asp-action="DeleteCategory" method="post">
+                    <input type="hidden" name="id" value="@c.Id" />
+                    <button class="btn btn-outline-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

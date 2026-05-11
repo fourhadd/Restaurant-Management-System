@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Order Success";
+}
+
+<div class="text-center py-5">
+    <h1 class="display-6">Order placed successfully!</h1>
+    <p>Your order number is <strong>#@ViewBag.OrderId</strong>.</p>
+    <a asp-controller="Menu" asp-action="Index" class="btn btn-warning">Continue Shopping</a>
+</div>

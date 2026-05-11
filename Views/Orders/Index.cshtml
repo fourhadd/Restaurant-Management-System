@@ -1,0 +1,22 @@
+@model List<FoodieRestaurant.Models.Order>
+@{
+    ViewData["Title"] = "Orders";
+}
+<h2>Order History</h2>
+<div class="table-responsive">
+    <table class="table">
+        <thead><tr><th>Order #</th><th>Date</th><th>Total</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.OrderId</td>
+                <td>@order.OrderDate.ToLocalTime()</td>
+                <td>$@order.TotalPrice</td>
+                <td>@order.Status</td>
+                <td><a asp-action="Details" asp-route-id="@order.OrderId" class="btn btn-outline-light btn-sm">Details</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,16 @@
+@model FoodieRestaurant.ViewModels.DashboardViewModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+<h2 class="mb-4">Admin Dashboard</h2>
+<div class="row g-3">
+    <div class="col-md-3"><div class="card p-3"><h6>Total Users</h6><h3>@Model.TotalUsers</h3></div></div>
+    <div class="col-md-3"><div class="card p-3"><h6>Total Foods</h6><h3>@Model.TotalFoods</h3></div></div>
+    <div class="col-md-3"><div class="card p-3"><h6>Total Orders</h6><h3>@Model.TotalOrders</h3></div></div>
+    <div class="col-md-3"><div class="card p-3"><h6>Revenue</h6><h3>$@Model.Revenue</h3></div></div>
+</div>
+<div class="mt-4 d-flex gap-2">
+    <a asp-action="Categories" class="btn btn-outline-light">Manage Categories</a>
+    <a asp-action="Foods" class="btn btn-outline-light">Manage Foods</a>
+    <a asp-action="Orders" class="btn btn-outline-light">Manage Orders</a>
+</div>

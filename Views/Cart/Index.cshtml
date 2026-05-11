@@ -1,0 +1,54 @@
+@model FoodieRestaurant.ViewModels.CartViewModel
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<h2 class="mb-3">Your Cart</h2>
+
+@if (Model.IsEmpty)
+{
+    <div class="alert alert-secondary">
+        Cart is empty. Browse the <a asp-controller="Menu" asp-action="Index">menu</a> and add your favorites.
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-professional align-middle">
+            <thead>
+            <tr>
+                <th>Food</th><th>Price</th><th>Qty</th><th>Total</th><th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.FoodName</td>
+                    <td>$@item.Price</td>
+                    <td>
+                        <form asp-action="Update" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="cartItemId" value="@item.CartItemId" />
+                            <input type="number" name="quantity" value="@item.Quantity" min="1" class="form-control w-auto" />
+                            <button class="btn btn-outline-light btn-sm">Update</button>
+                        </form>
+                    </td>
+                    <td>$@item.LineTotal</td>
+                    <td>
+                        <form asp-action="Remove" method="post">
+                            <input type="hidden" name="cartItemId" value="@item.CartItemId" />
+                            <button class="btn btn-outline-danger btn-sm">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    <div class="text-end">
+        <h4>Total: $@Model.TotalPrice</h4>
+        <form asp-controller="Orders" asp-action="Checkout" method="post">
+            <button class="btn btn-warning btn-lg">Checkout</button>
+        </form>
+    </div>
+}

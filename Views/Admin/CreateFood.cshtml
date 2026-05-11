@@ -1,0 +1,22 @@
+@model FoodieRestaurant.Models.Food
+@using FoodieRestaurant.Models
+@{
+    ViewData["Title"] = "Create Food";
+    var categories = ViewBag.Categories as List<Category> ?? new();
+}
+<h2>Create Food</h2>
+<form asp-action="CreateFood" method="post" enctype="multipart/form-data" class="row g-3">
+    <div class="col-md-6"><label asp-for="Name"></label><input asp-for="Name" class="form-control" /></div>
+    <div class="col-md-6"><label asp-for="Price"></label><input asp-for="Price" class="form-control" /></div>
+    <div class="col-12"><label asp-for="Description"></label><textarea asp-for="Description" class="form-control"></textarea></div>
+    <div class="col-md-6">
+        <label asp-for="CategoryId"></label>
+        <select asp-for="CategoryId" class="form-select">
+            @foreach (var c in categories) { <option value="@c.Id">@c.Name</option> }
+        </select>
+    </div>
+    <div class="col-md-3"><label asp-for="Rating"></label><input asp-for="Rating" class="form-control" /></div>
+    <div class="col-md-3"><label>Image</label><input type="file" name="imageFile" class="form-control" /></div>
+    <div class="col-md-3 form-check ms-2"><input asp-for="IsAvailable" class="form-check-input" /><label asp-for="IsAvailable" class="form-check-label"></label></div>
+    <div class="col-12"><button class="btn btn-warning">Save</button></div>
+</form>

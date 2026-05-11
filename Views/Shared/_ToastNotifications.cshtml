@@ -1,0 +1,23 @@
+@{
+    var success = TempData["ToastSuccess"]?.ToString();
+    var error = TempData["ToastError"]?.ToString();
+    var info = TempData["ToastInfo"]?.ToString();
+}
+
+@if (!string.IsNullOrWhiteSpace(success) || !string.IsNullOrWhiteSpace(error) || !string.IsNullOrWhiteSpace(info))
+{
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        @if (!string.IsNullOrWhiteSpace(success))
+        {
+            <div class="toast show text-bg-success" role="alert"><div class="toast-body">@success</div></div>
+        }
+        @if (!string.IsNullOrWhiteSpace(error))
+        {
+            <div class="toast show text-bg-danger" role="alert"><div class="toast-body">@error</div></div>
+        }
+        @if (!string.IsNullOrWhiteSpace(info))
+        {
+            <div class="toast show text-bg-info" role="alert"><div class="toast-body">@info</div></div>
+        }
+    </div>
+}
