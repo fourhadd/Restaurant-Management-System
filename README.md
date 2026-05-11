@@ -54,20 +54,9 @@ Bu layihə **ASP.NET Core MVC** platformasında hazırlanmış, müasir və yük
 
 1.  **Reponu klonlayın:**
     ```bash
-    git clone [https://github.com/your-username/FoodieRestaurant.git](https://github.com/your-username/FoodieRestaurant.git)
+    git clone https://github.com/fourhadd/Restaurant-Management-System.git
     ```
-2.  **Kitabxanaları bərpa edin:**
-    ```bash
-    dotnet restore
-    ```
-3.  **Verilənlər bazasını yeniləyin (Migrations):**
-    ```bash
-    dotnet ef database update
-    ```
-4.  **Layihəni işə salın:**
-    ```bash
-    dotnet run
-    ```
+2.  **Visual Studio-da (2022+) açın**
 
 ---
 
