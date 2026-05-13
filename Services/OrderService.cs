@@ -18,14 +18,21 @@ public class OrderService(ApplicationDbContext context) : IOrderService
 
     public async Task<DashboardViewModel> GetDashboardAsync()
     {
+
+        var revenueData = await context.Orders
+            .Where(o => o.Status == OrderStatus.Completed || 
+                        o.Status == OrderStatus.Preparing || 
+                        o.Status == OrderStatus.Pending)
+            .Select(o => (decimal?)o.TotalPrice)
+            .ToListAsync();
+
         return new DashboardViewModel
         {
             TotalUsers = await context.Users.CountAsync(),
             TotalFoods = await context.Foods.CountAsync(),
             TotalOrders = await context.Orders.CountAsync(),
-            Revenue = await context.Orders
-                .Where(o => o.Status == OrderStatus.Completed || o.Status == OrderStatus.Preparing || o.Status == OrderStatus.Pending)
-                .SumAsync(o => (decimal?)o.TotalPrice) ?? 0
+
+            Revenue = revenueData.Sum() ?? 0
         };
     }
 
@@ -57,7 +64,6 @@ public class OrderService(ApplicationDbContext context) : IOrderService
 
     public async Task<int> PlaceOrderAsync(string userId)
     {
-        // Load current cart and convert each cart line into an order line.
         var cartItems = await context.CartItems
             .Include(c => c.Food)
             .Where(c => c.UserId == userId)
@@ -83,7 +89,6 @@ public class OrderService(ApplicationDbContext context) : IOrderService
         };
 
         await context.Orders.AddAsync(order);
-        // Cart must be cleared after a successful order creation.
         context.CartItems.RemoveRange(cartItems);
         await context.SaveChangesAsync();
 

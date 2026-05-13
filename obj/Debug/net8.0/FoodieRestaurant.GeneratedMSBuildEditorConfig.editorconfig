@@ -9,99 +9,99 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FoodieRestaurant
 build_property.RootNamespace = FoodieRestaurant
-build_property.ProjectDir = /Users/farhadkarimov/Desktop/test/Restaurant-Management-System/
+build_property.ProjectDir = /Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/farhadkarimov/Desktop/test/Restaurant-Management-System
+build_property.MSBuildProjectDirectory = /Users/farhadkarimov/Desktop/ff/Restaurant-Management-System
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Areas/Identity/Pages/_ViewStart.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Admin/Categories.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Admin/Categories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ2F0ZWdvcmllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Admin/CreateFood.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Admin/CreateFood.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ3JlYXRlRm9vZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Admin/Dashboard.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Admin/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Admin/EditFood.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Admin/EditFood.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRWRpdEZvb2QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Admin/Foods.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Admin/Foods.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRm9vZHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Admin/Orders.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Admin/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vT3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Cart/Index.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Home/Index.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Home/Privacy.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Menu/Details.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Menu/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudS9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Menu/Index.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Menu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Orders/Details.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Orders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXJzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Orders/Index.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXJzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Orders/Success.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Orders/Success.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXJzL1N1Y2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Shared/Error.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Shared/_LoginPartial.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Shared/_ToastNotifications.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Shared/_ToastNotifications.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Ub2FzdE5vdGlmaWNhdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/_ViewImports.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/_ViewStart.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/Views/Shared/_Layout.cshtml]
+[/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5yjevrbmjc

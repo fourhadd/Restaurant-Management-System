@@ -13,8 +13,10 @@ public static class DbInitializer
         var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
         var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
+
         await context.Database.MigrateAsync();
 
+        // 1. Rolları yarat
         var roles = new[] { "Admin", "Customer" };
         foreach (var role in roles)
         {
@@ -25,6 +27,8 @@ public static class DbInitializer
         }
 
         const string adminEmail = "admin@foodie.local";
+        const string adminPassword = "Admin123!";
+
         var adminUser = await userManager.FindByEmailAsync(adminEmail);
         if (adminUser is null)
         {
@@ -36,12 +40,20 @@ public static class DbInitializer
                 FullName = "Foodie Admin"
             };
 
-            var result = await userManager.CreateAsync(adminUser, "Admin@12345");
+            var result = await userManager.CreateAsync(adminUser, adminPassword);
+            
             if (result.Succeeded)
             {
                 await userManager.AddToRoleAsync(adminUser, "Admin");
             }
+            else
+            {
+
+                var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+                throw new Exception($"Admin istifadəçisi yaradıla bilmədi! Səbəblər: {errors}");
+            }
         }
+
 
         if (!context.Categories.Any())
         {
@@ -55,6 +67,7 @@ public static class DbInitializer
             await context.Categories.AddRangeAsync(categories);
             await context.SaveChangesAsync();
         }
+
 
         if (!context.Foods.Any())
         {

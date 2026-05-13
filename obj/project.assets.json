@@ -2871,11 +2871,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/FoodieRestaurant.csproj",
+      "projectUniqueName": "/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/FoodieRestaurant.csproj",
       "projectName": "FoodieRestaurant",
-      "projectPath": "/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/FoodieRestaurant.csproj",
+      "projectPath": "/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/FoodieRestaurant.csproj",
       "packagesPath": "/Users/farhadkarimov/.nuget/packages/",
-      "outputPath": "/Users/farhadkarimov/Desktop/test/Restaurant-Management-System/obj/",
+      "outputPath": "/Users/farhadkarimov/Desktop/ff/Restaurant-Management-System/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/farhadkarimov/.nuget/NuGet/NuGet.Config"
