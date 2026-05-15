@@ -16,7 +16,7 @@ public static class DbInitializer
 
         await context.Database.MigrateAsync();
 
-        // 1. Rolları yarat
+
         var roles = new[] { "Admin", "Customer" };
         foreach (var role in roles)
         {
